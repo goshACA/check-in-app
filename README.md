@@ -11,5 +11,5 @@ Main functionalities:
   - XAMPP server to locate remote database
   - Google Maps API
 
-Detailed information can be found in check the **project_structure** file.
+Detailed information can be found in the **project_structure** file.
  
