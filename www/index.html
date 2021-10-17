@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport"
+    content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <link rel="stylesheet" href="deps/bootstrap-3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="themes/mytheme.min.css" />
+  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+
+
+
+  <!-- Include the jQuery library -->
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <!-- Include the jQuery Mobile library -->
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 5px;
+    }
+
+    th {
+      text-align: left;
+    }
+
+    #ff {
+      height: 100vh;
+      width: 100vw;
+      font-size: 40px;
+      font-family: Times;
+      background-repeat: no-repeat;
+      margin: 0px;
+      background-size: cover;
+      text-align: center;
+      color: rgb(219, 218, 218);
+      position: fixed;
+      text-shadow: 2px 2px #000000;
+    }
+  </style>
+</head>
+
+<body>
+  <div data-role="page" id="pindex" style="background-image: url('imgs/desc.gif'); background-repeat: no-repeat;
+  margin: 0px;
+  background-size: cover;">
+    <div data-role="header">
+      <h3>Berlin App</h3>
+    </div>
+    <div data-role="main" id="ff" style="background-color: rgba(255, 255, 255, 0.2); padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;">
+    <div style="border-radius: 20px;  border: 2px solid #ffad33; padding: 10px; background-color: rgba(131, 79, 20, 0.514);">
+     <h2>
+        WELCOME, DEAR GUEST!<br><br>
+      </h2>
+      <p"><center>
+        German beer and wine are world famous for their high quality. Some popular German food items are sauerkraut,
+        sauerbraten, bratwurst, frankfurters, limburger, and munster cheeses, apple strudel, and gummi bears (they were
+        invented in Germany.)<br>
+      </p></center>
+    </div>
+      <ul data-role="listview" data-inset="true">
+        <li style="background-color: #e7e429ad; margin-top: 50px;"><a href="loc.html">Find Restaurants</a></li>
+        <li><a href="#fav">Favourites</a></li>
+        <li><a href="#checkin">Check-in</a></li>
+        <li><a href="#pcontact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div data-role="footer" data-position="fixed">
+      <h4>&copy; Berlin 2021</h4>
+    </div>
+  </div>
+
+
+  <div data-role="page" id="pcontact" style="background-image: url('imgs/desc.gif'); height: 100vh; 
+      background-repeat: no-repeat;
+      background-size: cover;">
+    <div data-role="header">
+      <a href="#pindex" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
+      <h1>Contact Us</h1>
+    </div>
+    <div role="main" class="ui-content"
+      style="background-color: rgba(255, 255, 255, 0.2); width: 100vw; color: white; text-shadow: 2px 2px #7b7a7c48; font-size: 20px; ">
+      <p> <b>Phone:</b> <a href="tel:555-555-5555"> 28-88-88-88</a><br />
+        <b>Email:</b> <a href="mailto:berlin@restaurants.com"> berlin@restaurants.com</a>
+      </p>
+    </div>
+    <div data-role="footer" data-position="fixed">
+      <h4>&copy; Berlin 2021</h4>
+    </div>
+  </div>
+
+
+
+  <div data-role="page" id="fav" style="background-image: url('imgs/desc.gif'); height: 100vh; 
+     background-repeat: no-repeat;
+     background-size: cover;">
+    <div data-role="header">
+      <a href="#pindex" class="ui-btn ui-corner-all 
+       ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
+      <h3>Favourites</h3>
+    </div>
+    <div role="main" class="ui-content">
+      <button id="showcheckin" type="button">Show Favourites</button>
+      <table style="width:100%; visibility: hidden; background-color: rgba(255, 255, 255, 0.2);" id="checkintable">
+        <tr>
+          <th>Date</th>
+          <th>Address</th>
+          <th>Number</th>
+          <th>Email</th>
+        </tr>
+      </table>
+    </div>
+    <div data-role="footer" data-position="fixed">
+      <h4>&copy; Berlin 2021</h4>
+    </div>
+  </div>
+
+
+
+  <div data-role="page" id="checkin" style="background-image: url('imgs/desc.gif'); height: 100vh; 
+      background-repeat: no-repeat;
+      background-size: cover;">
+    <div data-role="header">
+      <a href="#pindex" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
+      <h1>Check-in</h1>
+      <a href="#fav" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-grid">View
+        favourites</a>
+    </div>
+    <div role="main" class="ui-content" style="color: white; text-shadow: 2px 2px #cc00ff48; font-size: 20px;">
+      <p> Please fill the form to check-in
+      <p>
+
+
+
+      <form id="target">
+        <div class="ui-field-contain" action="">
+          <label for="checkindate">Check-in date:</label>
+          <input name="checkindate" type="date" data-role-btn="false" id="chdate">
+          <label for="checkinaddress">Address:</label>
+          <input name="checkinaddress" type="text" data-role-btn="date" id="chaddress">
+          <label for="checkinphone">Restaurant Number:</label>
+          <input name="checkinphone" type="number" data-role-btn="date" id="chnumber">
+          <label for="checkinmail">Restaurant Mail:</label>
+          <input name="checkinmail" type="text" data-role-btn="date" id="chmail">
+
+          <br />
+
+        </div>
+
+      </form>
+      <button id="check" type="button" style="font-size: 20px;">Check-in</button>
+      <a href="#fav"><button id="show" type="button"
+          style="color: #f0a32f; text-shadow: 2px 2px #f5f5f59c; font-size: 20px;">Show All</button></a>
+
+    </div>
+
+
+
+    <div data-role="footer" data-position="fixed">
+      <h3>&copy; Berlin 2021</h3>
+    </div>
+  </div>
+
+
+  <script src="deps/jquery-3.3.1.min.js"></script>
+  <script src="deps/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="app.js"></script>
+  <script type="text/javascript" src="cordova.js"></script>
+</body>

@@ -1,0 +1,26 @@
+{
+  "name": "com.brodybits.testapp",
+  "version": "0.2.0",
+  "displayName": "cordova-sqlite-test-app",
+  "cordova": {
+    "platforms": [
+      "ios",
+      "android",
+      "browser"
+    ],
+    "plugins": {
+      "cordova-sqlite-storage": {},
+      "cordova-plugin-dialogs": {}
+    }
+  },
+  "dependencies": {
+    "cordova-sqlite-storage": "5.1.0"
+  },
+  "devDependencies": {
+    "cordova-android": "^9.0.0",
+    "cordova-browser": "^6.0.0",
+    "cordova-ios": "^6.1.1",
+    "cordova-plugin-dialogs": "~2.0.1",
+    "cordova-plugin-sqlserver": "file:../../Downloads/cordova-plugin-sqlserver-master"
+  }
+}

@@ -1,0 +1,4 @@
+.*.swp
+node_modules
+plugins
+platforms
